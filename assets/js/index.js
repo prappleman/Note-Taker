@@ -5,7 +5,7 @@ let saveNoteBtn;
 let newNoteBtn;
 let noteList;
 
-if (window.location.pathname === '/notes.html') {
+if (window.location.pathname === '/module11-challenge/notes.html') {
   noteForm = document.querySelector('.note-form');
   noteTitle = document.querySelector('.note-title');
   noteText = document.querySelector('.note-textarea');
@@ -116,15 +116,17 @@ const handleNewNoteView = (e) => {
 };
 
 
+
 // todo change rendered buttons
 
 
-// when in saved note = show new note button
+// title and text is full and is saved = show new note button
 
-// when in title = show clear form button 
-  //(do not remove button when start typing note text)
+// title or text is full = show clear form button 
 
-// when in note text = show save note button
+// title and text is full = show save note button
+
+
 
 // Renders the appropriate buttons based on the state of the form
 const handleRenderBtns = () => {
@@ -141,7 +143,7 @@ const handleRenderBtns = () => {
 // Render the list of note titles
 const renderNoteList = async (notes) => {
   let jsonNotes = await notes.json();
-  if (window.location.pathname === '/notes') {
+  if (window.location.pathname === '/module11-challenge/notes') {
     noteList.forEach((el) => (el.innerHTML = ''));
   }
 
@@ -187,7 +189,7 @@ const renderNoteList = async (notes) => {
     noteListItems.push(li);
   });
 
-  if (window.location.pathname === '/notes') {
+  if (window.location.pathname === '/module11-challenge/notes') {
     noteListItems.forEach((note) => noteList[0].append(note));
   }
 };
@@ -195,7 +197,7 @@ const renderNoteList = async (notes) => {
 // Gets notes from the db and renders them to the sidebar
 const getAndRenderNotes = () => getNotes().then(renderNoteList);
 
-if (window.location.pathname === '/notes') {
+if (window.location.pathname === '/module11-challenge/notes') {
   saveNoteBtn.addEventListener('click', handleNoteSave);
   newNoteBtn.addEventListener('click', handleNewNoteView);
   clearBtn.addEventListener('click', renderActiveNote);

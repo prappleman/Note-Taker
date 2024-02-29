@@ -25,7 +25,7 @@ const hide = (elem) => {
   elem.style.display = 'none';
 };
 
-// activeNote is used to keep track of the note in the textarea
+// activeNote is used to keep track of the note in the textarea 
 let activeNote = {};
 
 const getNotes = () =>
@@ -118,14 +118,28 @@ const handleNewNoteView = (e) => {
 // Renders the appropriate buttons based on the state of the form
 const handleRenderBtns = () => {
   show(clearBtn);
+
   if (!noteTitle.value.trim() && !noteText.value.trim()) {
     hide(clearBtn);
-  } else if (!noteTitle.value.trim() || !noteText.value.trim()) {
+    hide(saveNoteBtn);
+  } else if (!noteTitle.value.trim()) {
+    show(newNoteBtn);
+    hide(saveNoteBtn);
+  } else if (!noteText.value.trim()) {
+    show(clearBtn);
     hide(saveNoteBtn);
   } else {
+    show(clearBtn);
     show(saveNoteBtn);
+    hide(newNoteBtn);
   }
 };
+
+// Event listener for noteTitle input
+noteTitle.addEventListener('input', handleRenderBtns);
+
+// Event listener for noteText input
+noteText.addEventListener('input', handleRenderBtns);
 
 // Render the list of note titles
 const renderNoteList = async (notes) => {

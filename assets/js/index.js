@@ -5,7 +5,7 @@ let saveNoteBtn;
 let newNoteBtn;
 let noteList;
 
-if (window.location.pathname === '/module11-challenge/notes.html') {
+if (window.location.pathname === '/Note-Taker/notes.html') {
   noteForm = document.querySelector('.note-form');
   noteTitle = document.querySelector('.note-title');
   noteText = document.querySelector('.note-textarea');
@@ -132,7 +132,7 @@ const handleNewNoteView = (e) => {
 const handleRenderBtns = () => {
   show(clearBtn);
   if (!noteTitle.value.trim() && !noteText.value.trim()) {
-    show(clearBtn);
+    hide(clearBtn);
   } else if (!noteTitle.value.trim() || !noteText.value.trim()) {
     hide(saveNoteBtn);
   } else {
@@ -143,7 +143,7 @@ const handleRenderBtns = () => {
 // Render the list of note titles
 const renderNoteList = async (notes) => {
   let jsonNotes = await notes.json();
-  if (window.location.pathname === '/module11-challenge/notes') {
+  if (window.location.pathname === '/Note-Taker/notes') {
     noteList.forEach((el) => (el.innerHTML = ''));
   }
 
@@ -189,7 +189,7 @@ const renderNoteList = async (notes) => {
     noteListItems.push(li);
   });
 
-  if (window.location.pathname === '/module11-challenge/notes') {
+  if (window.location.pathname === '/Note-Taker/notes') {
     noteListItems.forEach((note) => noteList[0].append(note));
   }
 };
@@ -197,7 +197,7 @@ const renderNoteList = async (notes) => {
 // Gets notes from the db and renders them to the sidebar
 const getAndRenderNotes = () => getNotes().then(renderNoteList);
 
-if (window.location.pathname === '/module11-challenge/notes') {
+if (window.location.pathname === '/Note-Taker/notes') {
   saveNoteBtn.addEventListener('click', handleNoteSave);
   newNoteBtn.addEventListener('click', handleNewNoteView);
   clearBtn.addEventListener('click', renderActiveNote);

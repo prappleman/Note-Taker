@@ -8,23 +8,16 @@ Welcome to the Small Business Note Taker, a user-friendly application designed t
 - [Getting Started](#getting-started)
 - [Features](#features)
 - [Contributing](#contributing)
+- [Tests](#tests)
 - [License](#license)
 - [Questions](#questions)
 
 ## Getting Started
-Follow these steps to clone the repository, install necessary packages, and run the server:
+link to webpage: [Note Taker](https://note-taker-brry.onrender.com).
 
-Clone the Repository
-* Clone the repository to your local machine using the following command: git clone (copied https/ssh)
+<img src="Develop/public/assets/NoteTaker.png" title="Note Taker image">
 
-Install Dependencies
-* Navigate to the project directory in your terminal and Install the required Node.js packages using npm: npm install express fs
-* This command installs the express and fs packages required for the project.
-
-Run the Server
-* Start the server by running the following command: node server.js
-* This command will start the server and it should be running at http://localhost:3002/.
-* You should now be able to view the webpage served by the application.
+* reference features section below for an in depth look of what Note Taker is capable of.
 
 ## Features
 
@@ -67,6 +60,21 @@ Guidelines
 Pull Requests
 * Keep them focused and provide a clear description.
 * Reference relevant issues if applicable.
+
+## Tests
+Follow these steps to clone the repository, install necessary packages, and run the server locally:
+
+Clone the Repository
+* Clone the repository to your local machine using the following command: git clone (copied https/ssh)
+
+Install Dependencies
+* Navigate to the project directory in your terminal and Install the required Node.js packages using npm: npm install express fs
+* This command installs the express and fs packages required for the project.
+
+Run the Server
+* Start the server by running the following command: node server.js
+* This command will start the server and it should be running at http://localhost:3002/.
+* You should now be able to view the webpage served by the application.
 
 ## License
 ![None License](https://img.shields.io/badge/License-None-brightgreen)

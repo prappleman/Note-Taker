@@ -13,7 +13,10 @@ Welcome to the Small Business Note Taker, a user-friendly application designed t
 
 ## Getting Started
 * Clone the repository.
-* Open the index.html file in your preferred web browser.
+* Open the terminal 
+* install express an fs node packages (type: "node i express", and "node i fs" to install)
+* run server.js with node (type: "node server")
+* open webpage in a browser located at: http://localhost:3002/
 
 ## Features
 

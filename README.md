@@ -14,28 +14,17 @@ Welcome to the Small Business Note Taker, a user-friendly application designed t
 ## Getting Started
 Follow these steps to clone the repository, install necessary packages, and run the server:
 
-1. Clone the Repository
-Clone the repository to your local machine using the following command:
+Clone the Repository
+* Clone the repository to your local machine using the following command: git clone (copied https/ssh)
 
-git clone https://github.com/prappleman/Note-Taker.git
+Install Dependencies
+* Navigate to the project directory in your terminal and Install the required Node.js packages using npm: npm install express fs
+* This command installs the express and fs packages required for the project.
 
-2. Install Dependencies
-Navigate to the project directory in your terminal and Install the required Node.js packages using npm:
-
-npm install express fs
-This command installs the express and fs packages required for the project.
-
-3. Run the Server
-Start the server by running the following command:
-
-node server.js
-This command will start the server and it should be running at http://localhost:3002/.
-
-4. Open the Webpage
-Open a web browser and go to the following URL:
-
-http://localhost:3002/
-You should now be able to view the webpage served by the application.
+Run the Server
+* Start the server by running the following command: node server.js
+* This command will start the server and it should be running at http://localhost:3002/.
+* You should now be able to view the webpage served by the application.
 
 ## Features
 

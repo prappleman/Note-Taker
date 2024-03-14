@@ -15,6 +15,8 @@ Welcome to the Small Business Note Taker, a user-friendly application designed t
 ## Getting Started
 link to webpage: [Note Taker](https://note-taker-brry.onrender.com).
 
+* reference features section below for an in depth look of what Note Taker is capable of.
+
 ## Features
 
 Landing Page
